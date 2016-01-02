@@ -1,0 +1,5 @@
+message Transaction {
+  required string from = 1;
+  required string to = 2;
+  required int32 amount = 3;
+}
