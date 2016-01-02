@@ -3,8 +3,11 @@ defmodule HelloPhoenix.TransactionController do
 
   def create(conn, _params) do
     {:ok, data, _conn_details} = Plug.Conn.read_body(conn)
-    t=Protobufs.Transaction.decode(data)
+    params=Protobufs.Transaction.decode(data)
+    transaction = %HelloPhoenix.Transaction{}
+    transaction = Map.merge(transaction, params)
     conn
-      |> send_resp(201, "#{inspect t}")
+      |> send_resp(201, "#{inspect transaction}")
+    HelloPhoenix.repo.insert transaction
   end
 end

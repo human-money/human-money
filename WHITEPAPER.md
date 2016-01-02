@@ -1,3 +1,20 @@
+## Abstract
+[Bitcoin](https://bitcoin.org/en/) and other altcoins have proven that
+cryptocurrency is viable and capable of holding value. Mason money aims to take
+what can be learned from Bitcoin and approve upon it. First, it can be observed
+from the [Dogecoin](http://dogecoin.com/) community that culture is important
+when using a cryptocurrency. The values of the Mason Money community are similar
+and are based on optimism, empathy and open mindedness. The value of Bitcoin is
+[volatile](https://btcvol.info/) due to it's issuance mechanism and people
+speculating on the price. Mason Money solves this issue by pegging the value of
+a Mason Dollar to the value of US Dollar. This has proven to be successful thus
+far in other cryptocurrencies such as [NuBits](https://nubits.com/). Finally,
+over time the Bitcoin block reward will be
+[decreased](https://en.bitcoin.it/wiki/Controlled_supply) and eventually reach
+0. If mining power drops too low the network is vulnerable to a 51% attacl. There is also no incentive for running a Bitcoin node. Mason money solves
+both of these issues by separating proof of work from transaction processing
+and incentivizing running a node.
+
 ## Mason Miners and Mason Shares
 
 Mason Miners mine Mason Shares to which will in turn pay dividends and are used

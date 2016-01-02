@@ -1,5 +1,10 @@
+package protobufs;
+
 message Transaction {
-  required string from = 1;
-  required string to = 2;
-  required int32 amount = 3;
+  optional string to_address = 1;
+  required string to_public_key = 2;
+  optional string from_address = 3;
+  required string from_public_key = 4;
+  required uint64 amount = 5;
+  optional string signature = 6;
 }
