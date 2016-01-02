@@ -1,19 +1,26 @@
-# HelloPhoenix
+## Note this code in alpha
 
-To start your Phoenix app:
+Mason Money is under active development. Please check back soon to see when the
+network is planned to go live.
 
-  1. Install dependencies with `mix deps.get`
-  2. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  3. Start Phoenix endpoint with `mix phoenix.server`
+# Mason Money
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Mason money is stable cryptocurrency built for everyone :heart:.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+# Goals
 
-## Learn more
+  * Promote a positive culture around the currency based on openness, honesty
+    and inclusivity
+  * Minimize (or eliminate) price volatility.
+  * Minimize energy consumption required to keep the network secure
+  * Create a payment process that is user friendly. (Payment addresses look like
+    email addresses ie
+    "mason$mason.money"
+  * Make the best possible developer experience for interacting with the
+    protocol
+  * Keep the protocol and the implementation as simple as possible
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+# Currency Peg
+The unit of currency transacted on the  Mason network is the Mason dollar. The value of a Mason dollar is [pegged](https://en.wikipedia.org/wiki/Fixed_exchange-rate_system) to the USD. Mason nodes track exchange rates and create new currency only when deemed necessary to maintain the peg.
+
+Read the [white paper](https://github.com/masonforest/masonmoney/blob/master/WHITEPAPER.md).
