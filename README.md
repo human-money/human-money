@@ -1,5 +1,7 @@
 ## Note this code in alpha
 
+[![Join the chat at https://gitter.im/masonforest/masonmoney](https://badges.gitter.im/masonforest/masonmoney.svg)](https://gitter.im/masonforest/masonmoney?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Mason Money is under active development. Please check back soon to see when the
 network is planned to go live.
 
