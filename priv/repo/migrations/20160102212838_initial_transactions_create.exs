@@ -7,7 +7,7 @@ defmodule HelloPhoenix.Repo.Migrations.InitialTransactionsCreate do
       add :to_public_key, :string
       add :from_address, :string
       add :from_public_key, :string
-      add :amount, :int
+      add :amount, :integer
       add :signature, :string
 
       timestamps
