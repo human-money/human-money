@@ -1,5 +1,0 @@
-package protobufs;
-
-message Account {
-  required uint64 balance = 1;
-}
