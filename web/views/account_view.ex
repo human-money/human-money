@@ -1,7 +1,7 @@
 defmodule HelloPhoenix.AccountView do
   use HelloPhoenix.Web, :view
 
-  def render("show.json", %{balance: balance}) do
-    Protobufs.Account.encode(Protobufs.Account.new(balance: balance))
+  def render("show.json", %{data: data}) do
+    data
   end
 end

@@ -3,9 +3,7 @@ defmodule HelloPhoenix.AccountController do
 
   def show(conn, _params) do
     balance = HelloPhoenix.AccountBalanceQuery.balance(_params["account_id"])
-    a = Protobufs.Account.encode(Protobufs.Account.new(balance: balance))
-    conn
-    |> put_resp_content_type("application/x-protobuf")
-    |> send_resp(200, a)
+    data = %{balance: balance}
+    render conn, "show.json", data: data
   end
 end
