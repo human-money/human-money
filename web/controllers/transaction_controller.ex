@@ -11,4 +11,12 @@ defmodule HelloPhoenix.TransactionController do
     conn
       |> send_resp(201, "")
   end
+
+  def index(conn, _params) do
+    if Map.has_key?(_params, "public_key") do
+      render conn, "index.json", data: HelloPhoenix.TransactionQuery.by_public_key(_params["public_key"])
+    else
+      render conn, "index.json", data: Repo.all(HelloPhoenix.Transaction)
+    end
+  end
 end
