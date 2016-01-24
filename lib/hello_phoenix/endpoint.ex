@@ -35,5 +35,6 @@ defmodule HelloPhoenix.Endpoint do
     key: "_hello_phoenix_key",
     signing_salt: "ZzratCsa"
 
+  plug CORSPlug
   plug HelloPhoenix.Router
 end

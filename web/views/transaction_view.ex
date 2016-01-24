@@ -8,6 +8,6 @@ defmodule HelloPhoenix.TransactionView do
 
   def render("transaction.json", %{transaction: transaction}) do
     transaction
-    |> Map.take([:id, :amount,:from_address, :from_public_key, :to_public_key, :to_address])
+    |> Map.take([:id, :amount,:from_address, :from_public_key, :to_public_key, :to_address, :inserted_at])
   end
 end

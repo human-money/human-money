@@ -38,7 +38,8 @@ defmodule HelloPhoenix.Mixfile do
      {:exprotobuf, "1.0.0-rc1"},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:ecto, "~> 1.1.1"}
+     {:ecto, "~> 1.1.1"},
+     {:cors_plug, "~> 0.1.4"}
     ]
   end
 

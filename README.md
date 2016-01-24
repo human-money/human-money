@@ -8,9 +8,6 @@ network is planned to go live.
 Mason money is stable cryptocurrency built for everyone :heart:.
 
 # Goals
-
-  * Promote a positive culture around the currency based on optimism, empathy
-    and open mindedness
   * Minimize (or eliminate) price volatility.
   * Minimize energy consumption required to keep the network secure
   * Create a payment process that is user friendly. (Payment addresses look like
