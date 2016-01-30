@@ -1,4 +1,4 @@
-defmodule HelloPhoenix.Mixfile do
+defmodule MasonMoney.Mixfile do
   use Mix.Project
 
   def project do
@@ -17,7 +17,7 @@ defmodule HelloPhoenix.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {HelloPhoenix, []},
+    [mod: {MasonMoney, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end

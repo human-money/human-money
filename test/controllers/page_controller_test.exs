@@ -1,5 +1,5 @@
-defmodule HelloPhoenix.PageControllerTest do
-  use HelloPhoenix.ConnCase
+defmodule MasonMoney.PageControllerTest do
+  use MasonMoney.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

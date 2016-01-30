@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.LayoutView do
-  use HelloPhoenix.Web, :view
+defmodule MasonMoney.LayoutView do
+  use MasonMoney.Web, :view
 end

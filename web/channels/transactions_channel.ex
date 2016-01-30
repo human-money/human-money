@@ -1,4 +1,4 @@
-defmodule HelloPhoenix.TransactionChannel do
+defmodule MasonMoney.TransactionChannel do
   use Phoenix.Channel
 
   def join("transactions:*", auth_message, socket) do

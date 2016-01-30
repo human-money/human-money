@@ -1,12 +1,12 @@
-defmodule HelloPhoenix.AccountBalanceQuery do
+defmodule MasonMoney.AccountBalanceQuery do
   import Ecto.Query
 
   def balance(account_id) do
-    debitsQuery = from t in HelloPhoenix.Transaction, where: t.from_public_key == ^account_id, select: sum(t.amount)
-    totalDebits = List.first(HelloPhoenix.Repo.all(debitsQuery))
+    debitsQuery = from t in MasonMoney.Transaction, where: t.from_public_key == ^account_id, select: sum(t.amount)
+    totalDebits = List.first(MasonMoney.Repo.all(debitsQuery))
 
-    creditsQuery = from t in HelloPhoenix.Transaction, where: t.to_public_key == ^account_id, select: sum(t.amount)
-    totalCredits = List.first(HelloPhoenix.Repo.all(creditsQuery))
+    creditsQuery = from t in MasonMoney.Transaction, where: t.to_public_key == ^account_id, select: sum(t.amount)
+    totalCredits = List.first(MasonMoney.Repo.all(creditsQuery))
 
 
     if is_nil(totalDebits) do

@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.PageViewTest do
-  use HelloPhoenix.ConnCase, async: true
+defmodule MasonMoney.PageViewTest do
+  use MasonMoney.ConnCase, async: true
 end

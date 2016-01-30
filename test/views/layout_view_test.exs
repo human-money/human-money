@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.LayoutViewTest do
-  use HelloPhoenix.ConnCase, async: true
+defmodule MasonMoney.LayoutViewTest do
+  use MasonMoney.ConnCase, async: true
 end

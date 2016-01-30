@@ -1,4 +1,4 @@
-defmodule HelloPhoenix.Repo.Migrations.InitialTransactionsCreate do
+defmodule MasonMoney.Repo.Migrations.InitialTransactionsCreate do
   use Ecto.Migration
 
   def change do

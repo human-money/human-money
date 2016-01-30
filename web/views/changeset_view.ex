@@ -1,5 +1,5 @@
-defmodule HelloPhoenix.ChangesetView do
-  use HelloPhoenix.Web, :view
+defmodule MasonMoney.ChangesetView do
+  use MasonMoney.Web, :view
 
   def render("error.json", changeset) do
     %{errors: Enum.into(changeset.errors, %{})}

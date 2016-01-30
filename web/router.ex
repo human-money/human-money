@@ -1,10 +1,10 @@
-defmodule HelloPhoenix.Router do
-  use HelloPhoenix.Web, :router
+defmodule MasonMoney.Router do
+  use MasonMoney.Web, :router
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloPhoenix do
+  scope "/", MasonMoney do
     pipe_through :api
 
     post "/transactions", TransactionController, :create

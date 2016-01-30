@@ -1,7 +1,0 @@
-defmodule HelloPhoenix.TransactionView do
-  use HelloPhoenix.Web, :view
-
-  def render("json.json", %{data: data}) do
-    data
-  end
-end
