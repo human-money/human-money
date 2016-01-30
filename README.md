@@ -3,9 +3,25 @@
 Mason Money is under active development. Please check back soon to see when the
 network is planned to go live.
 
-# Mason Money
+# Mason Money Core
 
-Mason money is stable cryptocurrency built for everyone :heart:.
+Mason Money is stable cryptocurrency built for everyone :heart:.
+
+Mason Money Core is the software that runs the Mason Money network.
+
+# Deployment
+
+    git clone git@github.com:mason-money/mason-money.git
+    mix deps.get
+    mix phoenix.server
+
+or
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+By default your node will run in read only mode. To promote your server to
+master status you must mine at least one share of the network.
+
 
 # Goals
   * Minimize (or eliminate) price volatility.

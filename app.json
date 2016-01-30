@@ -1,0 +1,18 @@
+{
+  "name": "Mason Money Core",
+  "description": "Mason Money is stable cryptocurrency built for everyone",
+  "website": "http://mason.money/",
+  "scripts": {
+    "postdeploy": "mix ecto.migrate"
+  },
+  "env": {
+    "PEERS": {
+      "description": "A comma sperated list of peers to connect to",
+      "value": "test-1.mason.money,test-2.mason.money,test-3.mason.money"
+    }
+  },
+  "buildpacks": [
+    {"url": "https://github.com/HashNuke/heroku-buildpack-elixir"},
+    {"url": "https://github.com/gjaldon/phoenix-static-buildpack"}
+  ]
+}
