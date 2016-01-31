@@ -1,5 +1,5 @@
 defmodule MasonMoney.Endpoint do
-  use Phoenix.Endpoint, otp_app: :hello_phoenix
+  use Phoenix.Endpoint, otp_app: :mason_money
 
   socket "/socket", MasonMoney.UserSocket
 
@@ -8,7 +8,7 @@ defmodule MasonMoney.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :hello_phoenix, gzip: false,
+    at: "/", from: :mason_money, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -32,7 +32,7 @@ defmodule MasonMoney.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_hello_phoenix_key",
+    key: "_mason_money_key",
     signing_salt: "ZzratCsa"
 
   plug CORSPlug

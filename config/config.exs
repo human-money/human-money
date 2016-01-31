@@ -6,7 +6,7 @@
 use Mix.Config
 
 # Configures the endpoint
-config :hello_phoenix, MasonMoney.Endpoint,
+config :mason_money, MasonMoney.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "9/odqTeq3XdzCBfh0XTHPXXl1hXM01qsvydhpCegWqF73QvK44ZNwCT66wvmftZj",
