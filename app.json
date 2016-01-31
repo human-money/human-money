@@ -8,7 +8,7 @@
   "env": {
     "PEERS": {
       "description": "A comma sperated list of peers to connect to",
-      "value": "test-1.mason.money,test-2.mason.money,test-3.mason.money"
+      "value": "testnet-1.mason.money,testnet-2.mason.money,testnet-3.mason.money"
     }
   },
   "buildpacks": [
