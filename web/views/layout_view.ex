@@ -1,3 +1,3 @@
-defmodule MasonMoney.LayoutView do
-  use MasonMoney.Web, :view
+defmodule HumanMoney.LayoutView do
+  use HumanMoney.Web, :view
 end

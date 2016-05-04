@@ -1,9 +1,9 @@
-defmodule MasonMoney.TransactionView do
-  use MasonMoney.Web, :view
+defmodule HumanMoney.TransactionView do
+  use HumanMoney.Web, :view
   @attributes ~W(id)
 
   def render("index.json", %{data: data}) do
-    %{transactions: render_many(data, MasonMoney.TransactionView, "transaction.json")}
+    %{transactions: render_many(data, HumanMoney.TransactionView, "transaction.json")}
   end
 
   def render("transaction.json", %{transaction: transaction}) do

@@ -1,7 +1,7 @@
-defmodule MasonMoney.Endpoint do
+defmodule HumanMoney.Endpoint do
   use Phoenix.Endpoint, otp_app: :mason_money
 
-  socket "/socket", MasonMoney.UserSocket
+  socket "/socket", HumanMoney.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -36,5 +36,5 @@ defmodule MasonMoney.Endpoint do
     signing_salt: "ZzratCsa"
 
   plug CORSPlug
-  plug MasonMoney.Router
+  plug HumanMoney.Router
 end

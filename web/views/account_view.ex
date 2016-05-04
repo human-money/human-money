@@ -1,5 +1,5 @@
-defmodule MasonMoney.AccountView do
-  use MasonMoney.Web, :view
+defmodule HumanMoney.AccountView do
+  use HumanMoney.Web, :view
 
   def render("show.json", %{data: data}) do
     data

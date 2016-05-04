@@ -1,4 +1,4 @@
-defmodule MasonMoney.ErrorHelpers do
+defmodule HumanMoney.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -26,10 +26,10 @@ defmodule MasonMoney.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(MasonMoney.Gettext, "errors", msg, msg, opts[:count], opts)
+    Gettext.dngettext(HumanMoney.Gettext, "errors", msg, msg, opts[:count], opts)
   end
 
   def translate_error(msg) do
-    Gettext.dgettext(MasonMoney.Gettext, "errors", msg)
+    Gettext.dgettext(HumanMoney.Gettext, "errors", msg)
   end
 end

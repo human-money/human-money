@@ -1,3 +1,3 @@
-defmodule MasonMoney.PageView do
-  use MasonMoney.Web, :view
+defmodule HumanMoney.PageView do
+  use HumanMoney.Web, :view
 end

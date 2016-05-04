@@ -1,4 +1,4 @@
-defmodule MasonMoney.ModelCase do
+defmodule HumanMoney.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,16 +16,16 @@ defmodule MasonMoney.ModelCase do
 
   using do
     quote do
-      alias MasonMoney.Repo
+      alias HumanMoney.Repo
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
-      import MasonMoney.ModelCase
+      import HumanMoney.ModelCase
     end
   end
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(MasonMoney.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(HumanMoney.Repo, [])
     end
 
     :ok

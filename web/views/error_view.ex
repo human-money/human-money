@@ -1,5 +1,5 @@
-defmodule MasonMoney.ErrorView do
-  use MasonMoney.Web, :view
+defmodule HumanMoney.ErrorView do
+  use HumanMoney.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

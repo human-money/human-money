@@ -1,10 +1,10 @@
-defmodule MasonMoney.Router do
-  use MasonMoney.Web, :router
+defmodule HumanMoney.Router do
+  use HumanMoney.Web, :router
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", MasonMoney do
+  scope "/", HumanMoney do
     pipe_through :api
 
     post "/transactions", TransactionController, :create

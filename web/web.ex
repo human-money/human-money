@@ -1,12 +1,12 @@
-defmodule MasonMoney.Web do
+defmodule HumanMoney.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use MasonMoney.Web, :controller
-      use MasonMoney.Web, :view
+      use HumanMoney.Web, :controller
+      use HumanMoney.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule MasonMoney.Web do
     quote do
       use Phoenix.Controller
 
-      alias MasonMoney.Repo
+      alias HumanMoney.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import MasonMoney.Router.Helpers
-      import MasonMoney.Gettext
+      import HumanMoney.Router.Helpers
+      import HumanMoney.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule MasonMoney.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import MasonMoney.Router.Helpers
-      import MasonMoney.ErrorHelpers
-      import MasonMoney.Gettext
+      import HumanMoney.Router.Helpers
+      import HumanMoney.ErrorHelpers
+      import HumanMoney.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule MasonMoney.Web do
     quote do
       use Phoenix.Channel
 
-      alias MasonMoney.Repo
+      alias HumanMoney.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
-      import MasonMoney.Gettext
+      import HumanMoney.Gettext
     end
   end
 

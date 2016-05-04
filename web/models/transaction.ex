@@ -1,4 +1,4 @@
-defmodule MasonMoney.Transaction do
+defmodule HumanMoney.Transaction do
   use Ecto.Model
 
   @primary_key {:id, :binary_id, autogenerate: true}

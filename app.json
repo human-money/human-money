@@ -1,6 +1,6 @@
 {
-  "name": "Mason Money Core",
-  "description": "Mason Money is stable cryptocurrency built for everyone",
+  "name": "Human Money Core",
+  "description": "Human Money is stable cryptocurrency built for everyone",
   "website": "http://mason.money/",
   "scripts": {
     "postdeploy": "mix ecto.migrate"
