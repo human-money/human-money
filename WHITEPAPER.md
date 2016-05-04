@@ -84,8 +84,8 @@ receives a new transaction it will assign it a potential sequence number 1
 greater than previous action's.  The node will then sign the transaction and
 send it to all other nodes for signing. While transactions are in the
 propagating phase they may have the same potential sequence number. Nodes keep
-track of which other nodes have signed which transactions. Since at any point in
-time the network is a fixed size a node can be aware when a transaction has been
+track of which other nodes have signed which transactions. At any point in
+time the network is a fixed size. Therefore a node can be aware when a transaction has been
 signed by all other nodes.  Once this occurs that transaction goes into a
 nomination phase. A node should only be voting to nominate one transaction at a
 time. If a node is not currently voting to nominate a transaction it will hash
