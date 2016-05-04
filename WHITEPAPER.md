@@ -80,27 +80,25 @@ Nonce | Used for consesus | __required__ | 7 |
 ## Reaching Consensus
 
 Each action on the Human Money network has a unique sequential id.  When a node
-receives a new transaction it will assign it a potential sequence number which
-is 1 greater than the sequence number of the last transaction seen on the
-network.
-The node will then sign the transaction and send it to all other nodes for
-signing. While transactions are in the "propagating" phase they may have the
-same potential sequence number. Nodes keep track of which other nodes have
-signed which transactions. Since at any point in time the network is a fixed
-size a node can be aware when a transaction has been signed by all other nodes.
-Once this occurs that transaction goes into a nomination phase. A node should
-only be voting to nominate one transaction at a time. If a node is not currently
-voting to nominate a transaction it will hash all eligible transactions (those
-who have propagated to all nodes in the network) and the one with the snallest
-resulting hash will be submitted for nomination. If a node is voting to nominate
-a transaction and it receives a request to nominate a transaction with a lower
-hash it can change it's vote and send the request to all other nodes. Requests
-for transactions with higher hash values will be ignored. The network should
-converge on the transaction with the lowest hash value. Once the entire network
-has voted to nominate a transaction to that sequence number that transaction
-goes into a final round of signing. In the final round of singing nodes can not
-change their vote. Once all nodes have given their final signature that
-transaction is considered finalized.
+receives a new transaction it will assign it a potential sequence number 1
+greater than previous action's.  The node will then sign the transaction and
+send it to all other nodes for signing. While transactions are in the
+propagating phase they may have the same potential sequence number. Nodes keep
+track of which other nodes have signed which transactions. Since at any point in
+time the network is a fixed size a node can be aware when a transaction has been
+signed by all other nodes.  Once this occurs that transaction goes into a
+nomination phase. A node should only be voting to nominate one transaction at a
+time. If a node is not currently voting to nominate a transaction it will hash
+all eligible transactions (those who have propagated to all nodes in the
+network) and the one with the smallest resulting hash will be submitted for
+nomination. If a node is voting to nominate a transaction and it receives a
+request to nominate a transaction with a lower hash it can change it's vote and
+send the request to all other nodes. Requests for transactions with higher hash
+values will be ignored. The network should converge on the transaction with the
+lowest hash value. Once the entire network has voted to nominate a transaction
+to that sequence number that transaction goes into a final round of signing. In
+the final round of singing nodes can not change their vote. Once all nodes have
+given their final signature that transaction is considered finalized.
 
 ## Banning nodes
 
