@@ -13,7 +13,7 @@ and prevent the [double spend issue](https://en.bitcoin.it/wiki/Proof_of_Stake).
 
 Human Money uses the same methods as the Stellar Consensus Protocol
 ([WHITEPAPER](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)) to
-maintain consensus. However, there is only one
+maintain consensus however there is only one
 quorum.  To join this group a new node must solve a proof or work problem and have it
 verified by the network.
 
