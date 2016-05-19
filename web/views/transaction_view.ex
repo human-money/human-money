@@ -8,6 +8,12 @@ defmodule HumanMoney.TransactionView do
 
   def render("transaction.json", %{transaction: transaction}) do
     transaction
-    |> Map.take([:id, :amount,:from_address, :from_public_key, :to_public_key, :to_address, :inserted_at])
+    |> Map.take([
+      :uuid,
+      :amount,
+      :source,
+      :destination,
+      :inserted_at
+    ])
   end
 end

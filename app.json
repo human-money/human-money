@@ -1,14 +1,14 @@
 {
   "name": "Human Money Core",
   "description": "Human Money is stable cryptocurrency built for everyone",
-  "website": "http://mason.money/",
+  "website": "http://human.money/",
   "scripts": {
     "postdeploy": "mix ecto.migrate"
   },
   "env": {
     "PEERS": {
       "description": "A comma sperated list of peers to connect to",
-      "value": "testnet-1.mason.money,testnet-2.mason.money,testnet-3.mason.money"
+      "value": "testnet-1.human.money,testnet-2.human.money,testnet-3.human.money"
     }
   },
   "buildpacks": [

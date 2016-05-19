@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :mason_money, HumanMoney.Endpoint,
+config :human_money, HumanMoney.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -15,7 +15,7 @@ config :mason_money, HumanMoney.Endpoint,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
 
 # Watch static and templates for browser reloading.
-config :mason_money, HumanMoney.Endpoint,
+config :human_money, HumanMoney.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -34,8 +34,8 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :mason_money, HumanMoney.Repo,
+config :human_money, HumanMoney.Repo,
   adapter: Ecto.Adapters.Postgres,
-  database: "mason_money_dev",
+  database: "human_money_dev",
   hostname: "localhost",
   pool_size: 10

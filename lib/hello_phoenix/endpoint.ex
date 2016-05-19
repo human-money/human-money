@@ -1,5 +1,5 @@
 defmodule HumanMoney.Endpoint do
-  use Phoenix.Endpoint, otp_app: :mason_money
+  use Phoenix.Endpoint, otp_app: :human_money
 
   socket "/socket", HumanMoney.UserSocket
 
@@ -8,7 +8,7 @@ defmodule HumanMoney.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :mason_money, gzip: false,
+    at: "/", from: :human_money, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -32,7 +32,7 @@ defmodule HumanMoney.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_mason_money_key",
+    key: "_human_money_key",
     signing_salt: "ZzratCsa"
 
   plug CORSPlug

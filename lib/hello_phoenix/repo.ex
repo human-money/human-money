@@ -1,3 +1,3 @@
 defmodule HumanMoney.Repo do
-  use Ecto.Repo, otp_app: :mason_money
+  use Ecto.Repo, otp_app: :human_money
 end
