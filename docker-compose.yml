@@ -1,0 +1,18 @@
+version: '2'
+services:
+  postgres:
+    image: postgres
+    volumes_from:
+      - data
+  web:
+    build: .
+    command: mix phoenix.server
+    ports:
+      - "80:5000"
+    links:
+      - postgres
+  data:
+    image: cogniteev/echo
+    command: echo 'Data Container for PostgreSQL'
+    volumes:
+      - /var/lib/postgresql/data

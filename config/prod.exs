@@ -13,11 +13,11 @@ use Mix.Config
 # which you typically run after static files are built.
 config :human_money, HumanMoney.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "human-money.herokuapp.com", port: 443],
-force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [scheme: "http", host: "localhost", port: 80],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
+# force_ssl: [rewrite_on: [:x_forwarded_proto]],
 # Do not print debug messages in production
 config :logger, level: :info
 
@@ -67,6 +67,9 @@ config :logger, level: :info
 # Configure your database
 config :human_money, HumanMoney.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
+  database: "human_money",
+  hostname: "postgres",
+  username: "postgres",
+  password: "",
   pool_size: 20
 

@@ -2,8 +2,9 @@ defmodule HumanMoney.TransactionController do
   use HumanMoney.Web, :controller
   alias HumanMoney.Transaction
 
-  def create(conn, params) do
-    #{:ok, data, _conn_details} = Plug.Conn.read_body(conn)
+  def create(conn, _params) do
+    {:ok, data, _conn_details} = Plug.Conn.read_body(conn)
+    params = Map.from_struct(Protobufs.Transaction.decode(data))
     changeset = Transaction.changeset(%Transaction{}, params)
     if changeset.valid? do
       t = HumanMoney.Repo.insert! changeset
@@ -13,7 +14,7 @@ defmodule HumanMoney.TransactionController do
     else
       conn
         |> put_status(:unprocessable_entity)
-        |> render(HumanMoney.ChangesetView, "error.json", changeset)
+        |> render(HumanMoney.ChangesetView, "error.json", changeset: changeset)
     end
   end
 

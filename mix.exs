@@ -32,13 +32,13 @@ defmodule HumanMoney.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.1.1"},
      {:phoenix_ecto, "~> 2.0"},
-     {:postgrex, ">= 0.0.0"},
+     {:postgrex, ">= 0.11.0"},
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:exprotobuf, "1.0.0-rc1"},
+     {:exprotobuf, "1.0.0"},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:ecto, "~> 1.1.1"},
+     {:ecto, "~> 1.1.2"},
      {:cors_plug, "~> 0.1.4"}
     ]
   end

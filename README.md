@@ -11,24 +11,28 @@ Human Money Core is the software that runs the Human Money network.
 
 # Deployment
 
+## Deploy on Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Deploy via docker
+
+
+By default your node will run in read only mode. To promote your server to
+master status you must mine at least one share of the network.
+
+# Development
     git clone git@github.com:mason-money/mason-money.git
     mix deps.get
     mix phoenix.server
 
 or
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-By default your node will run in read only mode. To promote your server to
-master status you must mine at least one share of the network.
 
 
 # Goals
   * Minimize (or eliminate) price volatility.
   * Minimize energy consumption required to keep the network secure
-  * Create a payment process that is user friendly. (Payment addresses look like
-    email addresses ie
-    "mason$human.money"
   * Make the best possible developer experience for interacting with the
     protocol
   * Keep the protocol and the implementation as simple as possible

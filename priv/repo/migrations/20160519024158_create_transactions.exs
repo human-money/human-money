@@ -6,7 +6,7 @@ defmodule HumanMoney.Repo.Migrations.CreateTransactions do
       add :id, :uuid, primary_key: true
       add :source, :binary
       add :destination, :binary
-      add :amount, :binary
+      add :amount, :int
       add :signature, :binary
       timestamps
     end
