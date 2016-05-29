@@ -1,35 +1,18 @@
 defmodule HumanMoney.TransactionView do
   use HumanMoney.Web, :view
-  @attributes ~W(id)
+  use JaSerializer.PhoenixView
+  alias HumanMoney.AccountSerializer
 
-  def render_detail(message) do
-    message
-  end
+  location "/transactions"
+  attributes [:inserted_at, :updated_at, :source, :destination]
 
-  def render("index.json", %{data: data}) do
-    %{transactions: render_many(data, HumanMoney.TransactionView, "transaction.json")}
-  end
+  def source(transaction, _conn), do: encode(transaction.source)
+  def destination(transaction, _conn), do: encode(transaction.destination)
 
-  def render("transaction.json", %{transaction: transaction}) do
-    transaction
-    |> Map.take([
-      :uuid,
-      :amount,
-      :source,
-      :destination,
-      :inserted_at,
-      :updated_at
-    ])
-    |> base64_encode_bitstrings
-  end
 
-  def base64_encode_bitstrings(transaction) do
-    for {k, v} <- transaction, into: %{} do
-      if is_bitstring(v) do
-        {k, Base.encode64(v)}
-      else
-        {k, v}
-      end
+  def encode(account) do
+    if account do
+      Base.encode64(account.address)
     end
   end
 end

@@ -30,8 +30,9 @@ defmodule HumanMoney.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.1.1"},
+    [{:phoenix, "~> 1.2.0-rc.1"},
      {:phoenix_ecto, "~> 2.0"},
+     {:ja_serializer, "~> 0.9.0"},
      {:postgrex, ">= 0.11.0"},
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},

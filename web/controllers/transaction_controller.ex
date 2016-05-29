@@ -1,11 +1,24 @@
 defmodule HumanMoney.TransactionController do
   use HumanMoney.Web, :controller
   alias HumanMoney.Transaction
+  alias HumanMoney.Services.AccountCreator
 
   def create(conn, _params) do
     {:ok, data, _conn_details} = Plug.Conn.read_body(conn)
     params = Map.from_struct(Protobufs.Transaction.decode(data))
-    changeset = Transaction.changeset(%Transaction{}, params)
+    source = AccountCreator.find_or_create(params[:source])
+    destination = AccountCreator.find_or_create(params[:destination])
+    changeset = Transaction.changeset(
+      %Transaction{},
+      %{
+        amount: params[:amount],
+        source_id: source.id,
+        destination_id: destination.id
+      }
+    )
+      |> Ecto.Changeset.put_change(:source_id, source.id)
+      |> Ecto.Changeset.put_change(:destination_id, destination.id)
+
     if changeset.valid? do
       t = HumanMoney.Repo.insert! changeset
       HumanMoney.Endpoint.broadcast! "transactions:*", "new:transaction", %{transaction: HumanMoney.TransactionView.render("transaction.json", transaction: t)}
@@ -19,13 +32,11 @@ defmodule HumanMoney.TransactionController do
   end
 
   def index(conn, _params) do
-    query = from t in Transaction,
-      order_by: [desc: t.inserted_at]
+    render conn, data: Repo.all from t in Transaction,
+            preload: [:source, :destination]
+  end
 
-    if Map.has_key?(_params, "public_key") do
-      render conn, "index.json", data: HumanMoney.TransactionQuery.by_public_key(_params["public_key"])
-    else
-      render conn, "index.json", data: Repo.all(query)
-    end
+  def show(conn, params) do
+    render conn, data: Repo.get(Article, params[:id])
   end
 end
